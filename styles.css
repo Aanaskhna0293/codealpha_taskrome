@@ -1,0 +1,302 @@
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #166088;
+    --accent-color: #4fc3f7;
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --light-text: #777;
+    --border-color: #ddd;
+    --high-priority: #ff5252;
+    --medium-priority: #ffb74d;
+    --low-priority: #66bb6a;
+    --completed-color: #bdbdbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--light-text);
+    font-size: 1.1rem;
+}
+
+.app-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+.input-section input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.input-section select {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.input-section button {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-section button:hover {
+    background-color: var(--secondary-color);
+}
+
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.task-list {
+    margin-bottom: 25px;
+}
+
+.task-list ul {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item.completed {
+    background-color: #f9f9f9;
+}
+
+.task-checkbox {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: var(--completed-color);
+}
+
+.task-priority {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 15px;
+    color: white;
+}
+
+.priority-high {
+    background-color: var(--high-priority);
+}
+
+.priority-medium {
+    background-color: var(--medium-priority);
+}
+
+.priority-low {
+    background-color: var(--low-priority);
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--light-text);
+    transition: color 0.3s;
+}
+
+.task-actions button:hover {
+    color: var(--primary-color);
+}
+
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.stats-box {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f5f7fa;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.stats-box span:first-child {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.stats-box span:last-child {
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.action-buttons button {
+    padding: 12px 20px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+.action-buttons button:first-child {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.action-buttons button:first-child:hover {
+    background-color: var(--secondary-color);
+}
+
+.action-buttons button:last-child {
+    background-color: #ff5252;
+    color: white;
+    border-color: #ff5252;
+}
+
+.action-buttons button:last-child:hover {
+    background-color: #ff3545;
+}
+
+
+@media (max-width: 768px) {
+    .input-section {
+        flex-direction: column;
+    }
+    
+    .filter-section {
+        justify-content: center;
+    }
+    
+    .stats-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+
